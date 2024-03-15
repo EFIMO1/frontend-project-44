@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import gameBody from '../src/gameBody.js';
 
-const description = 'Answer "yes" if the number is even. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const task = () => {
   const num = Math.round(Math.random() * 50);
