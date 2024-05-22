@@ -9,3 +9,4 @@ The hexlet-check.yml file is responsible for running these tests - do not delete
 [![asciicast](https://asciinema.org/a/rDSOtPMvPyuPNl0ZoLw9Qsibx.svg)](https://asciinema.org/a/rDSOtPMvPyuPNl0ZoLw9Qsibx)
 [![asciicast](https://asciinema.org/a/mr1FqhftLDKmzfiY1YfC9kq8H.svg)](https://asciinema.org/a/mr1FqhftLDKmzfiY1YfC9kq8H)
 [![asciicast](https://asciinema.org/a/ibVbxjFVQhNgUKYFlZcWENfRB.svg)](https://asciinema.org/a/ibVbxjFVQhNgUKYFlZcWENfRB)
+[![asciicast](https://asciinema.org/a/TK9HHugd5AguWoeE0SCTJ3XYK.svg)](https://asciinema.org/a/TK9HHugd5AguWoeE0SCTJ3XYK)
