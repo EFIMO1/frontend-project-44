@@ -10,7 +10,7 @@ function randomOperation() {
   return operations[randomIndex];
 }
 
-function calculateExpression(num1, operator, num2) {
+function calcExpression(num1, operator, num2) {
   switch (operator) {
     case '+':
       return num1 + num2;
@@ -28,7 +28,7 @@ function brainCalc() {
   const num2 = getRandomNumber(1, 100);
   const operator = randomOperation();
   const question = `${num1} ${operator} ${num2}`;
-  const correctAnswer = calculateExpression(num1, operator, num2);
+  const correctAnswer = calcExpression(num1, operator, num2);
   return [question, String(correctAnswer)];
 }
 
