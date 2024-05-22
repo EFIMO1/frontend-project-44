@@ -1,30 +1,27 @@
 import readlineSync from 'readline-sync';
-import greeting from './cli.js';
+import greetings from './cli.js';
 
-const gameBody = (description, taskFunc) => {
-  const playerName = greeting();
-  console.log(description);
-
-  let mark = 0;
-  for (let i = 1; i <= 3; i += 1) {
-    const step = taskFunc();
-
-    console.log(`Question: ${step[0]}`);
-    const answer = readlineSync.question('Answer: ');
-
-    if (answer === step[1]) {
-      console.log('Correct!');
-      mark += 1;
-    } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${step[1]}.`);
-      console.log(`Let's try again, ${playerName}!`);
-      break;
+function brainGameStart(task, gameName) {
+  const PlayerName = greetings();
+  console.log(task);
+  let correctCount = 0;
+  while (correctCount < 3) {
+    const [question, correctAnswer] = gameName();
+    console.log(`Question: ${question}`);
+    const playerAnswer = readlineSync.question('Your answer: ');
+    if (correctAnswer !== playerAnswer) {
+      console.log(`"${playerAnswer}" is a wrong answer. Correct answer was "${correctAnswer}".`);
+      console.log(`Let's try again, ${PlayerName}!`);
+      return;
     }
+    console.log('Correct!');
+    correctCount += 1;
   }
+  console.log(`Congratulations, ${PlayerName}!`);
+}
 
-  if (mark === 3) {
-    console.log(`Congratulations, ${playerName}!`);
-  }
-};
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-export default gameBody;
+export { brainGameStart, getRandomNumber };
